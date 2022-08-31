@@ -41,11 +41,9 @@ function onTranslateClick() {
 async function onApiCall() {
     setTimeout(() => {
         try {
-            // const result = await fetch("https://api.funtranslations.com/translate/minion.json?text=" + mytext); // Now this will wait till it finished
-            // let translatedtext = await result.json(); 
-            // let translatedtext = await result.json();
-            // finaltext.innerHTML = translatedtext.contents.translated;
-            finaltext.innerHTML="Hello MOTO";
+            const result = await fetch("https://api.funtranslations.com/translate/yoda.json?text=" + mytext); // Now this will wait till it finished
+            let translatedtext = await result.json(); 
+            finaltext.innerHTML = translatedtext.contents.translated;
             finaltext.style.color="indigo";
             translate.innerHTML = "Translated";
         } catch (e) {
