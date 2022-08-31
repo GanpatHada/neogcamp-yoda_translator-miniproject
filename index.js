@@ -18,12 +18,12 @@ document.getElementById("mytext").addEventListener('input', () => {
 });
 
 translate.addEventListener("click", () => {
-   
+
     return onTranslateClick();
 
 })
 clear.addEventListener("click", () => {
-    
+
     return onClearClick();
 
 })
@@ -39,22 +39,22 @@ function onTranslateClick() {
     onApiCall();
 }
 async function onApiCall() {
-    setTimeout(() => {
-        try {
-            const result = await fetch("https://api.funtranslations.com/translate/yoda.json?text=" + mytext); // Now this will wait till it finished
-            let translatedtext = await result.json(); 
-            finaltext.innerHTML = translatedtext.contents.translated;
-            finaltext.style.color="indigo";
-            translate.innerHTML = "Translated";
-        } catch (e) {
-            finaltext.style.color = "#a50000";
-            finaltext.innerHTML = "Something error has been occured.Please try again";
-            translate.innerHTML = "Translated";
-            console.log(e);
-        }
-    },5000);
+
+    try {
+        const result = await fetch("https://api.funtranslations.com/translate/yoda.json?text=" + mytext); // Now this will wait till it finished
+        let translatedtext = await result.json();
+        finaltext.innerHTML = translatedtext.contents.translated;
+        finaltext.style.color = "indigo";
+        translate.innerHTML = "Translated";
+    } catch (e) {
+        finaltext.style.color = "#a50000";
+        finaltext.innerHTML = "Something error has been occured.Please try again";
+        translate.innerHTML = "Translated";
+        console.log(e);
+    }
+
 }
-function onClearClick(){
+function onClearClick() {
     //function called after clear button pressed
     finaltext.style.color = "#6b6b6b";
     finaltext.innerHTML = "Translated text will appear Here";
