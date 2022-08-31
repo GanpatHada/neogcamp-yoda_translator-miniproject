@@ -63,13 +63,16 @@ textarea{
 }
 textarea:focus{
     outline: none;
+    
 }
 main p{
     width: 70vw;
     margin-bottom: 20px;
-    color: rgb(47, 0, 80);
+    color: rgb(107, 107, 107);
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 .btn{
     height: 40px;
@@ -86,7 +89,7 @@ main p{
 #translate-btn{
       width: 150px;
       background: indigo;
-      color: rgb(235, 206, 255);
+      color: rgb(255, 255, 255);
 }
 #clear-btn{
     color: indigo;
