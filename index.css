@@ -106,7 +106,7 @@ main p{
 main div{
     text-align: center;
 }
-@media only screen and (max-width: 675px)  {
+@media only screen and (max-width: 1000px)  {
     textarea{
         width: 90vw;
         margin: auto;
